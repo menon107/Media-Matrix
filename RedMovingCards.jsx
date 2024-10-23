@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import './RedMovingCards.css';
+import tracksImage from '/mnt/data/TRACKS.png'; // Make sure this path points correctly
 
 const cards = [
   { id: 1, title: "Bohemian Rhapsody", artist: "Queen" },
@@ -37,16 +38,22 @@ export default function RedMovingCards() {
   }, []);
 
   return (
-    <div className="red-moving-cards-container">
-      <div className="red-moving-cards" ref={containerRef}>
-        {[...cards, ...cards].map((card, index) => (
-          <div key={`${card.id}-${index}`} className="card">
-            <h3>{card.title}</h3>
-            <p>{card.artist}</p>
-          </div>
-        ))}
+    <div>
+      {/* Add the image */}
+      <div className="tracks-logo">
+        <img src={tracksImage} alt="Tracks Logo" />
+      </div>
+      
+      <div className="red-moving-cards-container">
+        <div className="red-moving-cards" ref={containerRef}>
+          {[...cards, ...cards].map((card, index) => (
+            <div key={`${card.id}-${index}`} className="card">
+              <h3>{card.title}</h3>
+              <p>{card.artist}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
