@@ -1,0 +1,92 @@
+.animation-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure it grows beyond the viewport */
+    display: flex;
+    flex-direction: column; /* Stack frames vertically */
+    justify-content: flex-start; /* Align content at the top */
+    align-items: center;
+    transition: background-color 1s ease; /* Smooth transition to black */
+    overflow: auto; /* Enable scrolling */
+}
+
+.animation-container.black-background {
+    background-color: black; /* Background turns black */
+}
+
+.frame {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-title {
+    position: relative;
+    z-index: 1;
+    font-size: 36px;
+    color: #fff;
+    text-align: center;
+    padding-top: 20vh; /* Adjust the vertical position */
+}
+
+.kids {
+    position: absolute;
+    bottom: 0; /* Set kids towards the bottom of the screen */
+    max-width: 80%;
+}
+
+.Cycle {
+    position: absolute;
+    bottom: -2vh;
+    max-width: 80%;
+}
+
+.path {
+    position: absolute;
+    bottom: -5vh;  /* Appears just below the kids */
+    width: 95%;    /* Adjust width as needed */
+}
+
+.alien {
+    position: absolute;
+    top: 0; /* Set alien towards the top */
+    max-width: 90%; 
+}
+
+.treetrunk {
+    position: absolute;
+    top: 40%; /* Move the tree trunk slightly higher up */
+    left: 50%; /* Centered horizontally */
+    transform: translate(-50%, -50%); /* Adjust for exact centering */
+    width: 80%;
+    opacity: 0; /* Initially hidden */
+}
+
+.big-trees {
+    position: absolute;
+    bottom: 0; 
+    left: 0%; /* Centers the element horizontally */
+    transform: translateX(-50%); /* Corrects for the horizontal centering */
+    width: 100%; /* Adjust the width as needed */
+}
+
+.left-tree, .right-tree {
+    position: absolute;
+    bottom: 0;
+    width: 30%; /* Adjust width as needed */
+}
+
+.left-tree {
+    width: 50%; /* Increase the width to make the left tree larger */
+    height: auto;
+    bottom: -50vh;
+    right: 55%; /* Adjusted to ensure better alignment */
+}
+
+.right-tree {
+    right: 5%;
+    bottom: -5vh; /* Adjusted to ensure better alignment */
+}

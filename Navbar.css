@@ -1,0 +1,85 @@
+/* navbar.css */
+
+.nav {
+    margin-bottom: 3rem;
+}
+/* General styles for navigation */
+.nav-logo {
+    margin-right: auto;
+}
+
+.nav-logo img {
+    width: 3.8rem;
+}
+
+.nav-button {
+    width: 300px;
+    height: 100px;
+    border-radius: 40px !important;
+    color: white;
+    background-color: transparent;
+    border: 3px solid #006765;
+    margin-left: auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Center the navbar items */
+/* Set navbar width to full and center nav links */
+.nav-list {
+    display: flex;
+    justify-content: center; /* Center the nav links horizontally */
+    align-items: center; /* Center the nav links vertically */
+    width: 100%; /* Full width */
+    list-style: none; /* Remove list bullets */
+    gap: 3rem; /* Adjust gap between links as needed */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Styling for navigation links */
+.nav li {
+    padding: 10px; /* Optional padding around links */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; /* Adjust the font size */
+    color: white; /* Adjust text color */
+    text-align: center;
+}
+
+/* Hover effect for links */
+.nav li:hover {
+    color: #ffcc00; /* Change link color on hover */
+}
+
+/* Full width responsive behavior */
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 1rem;
+    }
+}
+
+
+.navlist.black-background {
+    background-color: black;
+    color: white; 
+}
+
+@media (max-width: 600px) {
+    .hamburger-icon {
+        z-index: 10;
+    }
+    .ham {
+        z-index: 100;
+        position: absolute;
+        right: 0;
+    }
+    .nav-button {
+        display: none;
+    }
+    .nav-logo {
+        position: absolute;
+    }
+    .nav-logo img {
+        width: 3.4rem;
+    }
+}

@@ -1,0 +1,39 @@
+.animation-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.big-trees-down, .left-tree-down, .right-tree-down, .running-down, .monster-down {
+    position: absolute;
+}
+
+.big-trees-down {
+    width: 100%;
+}
+
+.left-tree-down {
+    width: 40%;
+    top: -45vh;
+    left: -3vh;
+}
+
+.right-tree-down {
+    width: 30%;
+    top: -12vh;
+    right: 3vh;
+}
+
+.running-down {
+    width: 70%;
+    top: -8vh;
+}
+
+/* Make sure the monster image doesn't overlap with the navbar */
+.monster-down {
+    width: 100%;
+    height: 90%; /* Use auto to maintain aspect ratio */
+    bottom: 10vh;
+    z-index: 1; /* Ensures the monster is above other images but not the navbar */
+}
