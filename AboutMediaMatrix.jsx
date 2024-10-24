@@ -1,16 +1,18 @@
-'use client'
+'use client';
 
-import React, { useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect, useState } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import './AboutMediaMatrix.css'; // Import the CSS file
 
 export default function AboutMediaMatrix() {
-  useEffect(() => {
-    AOS.init({ once: true })
-  }, [])
+  const [backgroundColor, setBackgroundColor] = useState('');
 
+  useEffect(() => {
+    AOS.init({ once: true });
+    
   return (
-    <section className="about-us" id="AboutUs">
+    <section className="about-us" id="AboutUs" style={{ backgroundColor }}>
       <div className="about-us-content">
         <h1 className="about-us-title" data-aos="fade-up" data-aos-duration="1000">
           ABOUT US
@@ -33,14 +35,15 @@ export default function AboutMediaMatrix() {
             </p>
           </div>
           <div className="about-us-logo" data-aos="fade-up" data-aos-duration="1000">
-            <img
-              src="/assets/MM_logo_1.png"
-              alt="Media Matrix Logo"
-              style={{ width: '300px', height: '300px', objectFit: 'contain' }}
-            />
+            <div className="image-container">
+              <img
+                src="/assets/MM_logo_1.png"
+                alt="Media Matrix Logo"
+              />
+            </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
