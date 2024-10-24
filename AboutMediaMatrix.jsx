@@ -23,8 +23,6 @@ const AboutUs = () => {
               Turing Test, Debate, eSports, Quiz, Designathon, and Pitching, Media Matrix
               challenges participants to showcase their creativity, communication skills,
               analytical thinking, and technical prowess.
-            </p>
-            <p>
               Whether it's crafting compelling narratives, solving complex puzzles, or designing innovative solutions,
               Media Matrix offers a platform for all.
             </p>
