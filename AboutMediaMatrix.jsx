@@ -1,21 +1,22 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import React from 'react';
-import './AboutMediaMatrix.css'; //importing About IIITNR.css because of same classnames
+'use client'
 
-const AboutUs = () => {
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+export default function AboutMediaMatrix() {
   useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
+    AOS.init({ once: true })
+  }, [])
 
   return (
-    <div className="about-us" id="About Us">
+    <section className="about-us" id="AboutUs">
       <div className="about-us-content">
-        <h1 className="about-us-title" data-aos="fade-up" data-aos-duration="6000">
+        <h1 className="about-us-title" data-aos="fade-up" data-aos-duration="1000">
           ABOUT US
         </h1>
         <div className="about-us-flex">
-          <div className="about-us-text" data-aos="fade-up" data-aos-duration="3000">
+          <div className="about-us-text" data-aos="fade-up" data-aos-duration="1000">
             <p>
               Media Matrix is a flagship event organized by the Media & IT Cell of IIIT-NR,
               bringing together creative minds and problem solvers across multiple
@@ -31,16 +32,15 @@ const AboutUs = () => {
               and competition!
             </p>
           </div>
-          <div className="about-us-logo" data-aos="fade-up" data-aos-duration="3000">
+          <div className="about-us-logo" data-aos="fade-up" data-aos-duration="1000">
             <img
-              src={require('../assets/MM_logo_1.png')}
+              src="/assets/MM_logo_1.png"
               alt="Media Matrix Logo"
+              style={{ width: '300px', height: '300px', objectFit: 'contain' }}
             />
           </div>
         </div>
       </div>
-    </div>
-  );
-};
-
-export default AboutMediaMatrix;
+    </section>
+  )
+}
